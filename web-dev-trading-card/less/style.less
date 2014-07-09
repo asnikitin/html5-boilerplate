@@ -1,0 +1,208 @@
+/* Derived from http://desandro.github.io/3dtransforms/examples/card-01.html */
+
+@inset-size: 85px;
+@card-height: 300px;
+@card-width: 200px;
+
+.transition(@time: 1s) {
+  -webkit-transition: -webkit-transform @time;
+  -moz-transition: -moz-transform @time;
+  -o-transition: -o-transform @time;
+  transition: transform @time;
+}
+.transform-style(@style: preserve-3d) {
+  -webkit-transform-style: @style;
+  -moz-transform-style: @style;
+  -o-transform-style: @style;
+  transform-style: @style;
+}
+.rotate(@angle: 0) {
+  transform:rotate(@angle);
+  -ms-transform:rotate(@angle);
+  -webkit-transform:rotate(@angle);
+}
+.flip(@y: 0deg) {
+    -webkit-transform: rotateY(@y);
+    -moz-transform: rotateY(@y);
+    -o-transform: rotateY(@y);
+    transform: rotateY(@y);
+}
+.flip-rotate(@y: 0deg, @angle: 0deg){
+  -webkit-transform: rotateY(@y) rotate(@angle);
+  -moz-transform: rotateY(@y) rotate(@angle);
+  -o-transform: rotateY(@y) rotate(@angle);
+  transform: rotateY(@y) rotate(@angle);
+}
+body {
+  background: #333;
+}
+.card {
+  height: @card-height;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: @card-width;
+  .transition(.5s);
+  .transform-style();  
+  .rotate(7deg);
+  
+  &:hover {
+    .flip-rotate(180deg,3deg);
+  }
+
+  & figure {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #666;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &::before {
+      content: "";
+      
+      // Image overlay to give a grainy, halftone look
+      background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+      border: 10px solid #f7ede7;
+      box-shadow: inset 3px 3px 0 #000, inset -3px -3px #000;
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0; 
+    }
+    
+    .banner {
+      
+    }
+    
+    &.front {
+      
+      // Let's go get my normal Codepen profile image
+      background-image: url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/8103/profile/profile-512_1.jpg);      
+      background-position: 111% top;
+      box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+      
+      /* Seems unnecessary, but this z-index handles an 
+      /* odd flickering of absolutely positioned content
+      /* inside the card region */
+      z-index: 50;
+      &::after {
+          content: "";
+        
+          // An image overlay to create a worn appearance.
+          background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+          background-size: contain;
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: 100;
+      }
+      .inset-image {
+        
+          // Grabbing my normal Facebook profile image
+          background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg); 
+          background-size: contain;
+          border-radius: 50%;
+          position: absolute;
+          height:  @inset-size;
+          width:  @inset-size;
+          bottom: 15px;
+          right: 15px;
+          z-index: 500;
+        
+          // This is causing FF to not render the inset image, commenting out for now.
+          //filter: url(https://dl.dropbox.com/s/6lxmpjyhu30n6s7/filters.svg#grayscale);
+        
+          filter: gray; 
+          -webkit-filter: grayscale(1);
+          &::before{
+            background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+            border: 1px solid #000;
+            border-radius: 50%;
+            content: "";
+            height:  @inset-size;
+            position: absolute;
+            opacity: .4;
+            top: 1px; right: 1px;
+            width:  @inset-size;
+            z-index: 100;
+          }
+          &::after{
+            content: "";
+            background-color: rgba(0,255,0, .25);
+            box-shadow: inset 0 0 150px rgba(0,255,255,.25), 2px 4px 0 rgba(0,255,255,.5);
+            border: 1px solid #000;
+            filter: none;
+            -webkit-filter: grayscale(0);
+            border-radius: 50%;
+            height:  @inset-size;
+            position: absolute;
+            top: -2px; right: 0; bottom: 0; left: -2px;
+            width:  @inset-size;
+            z-index: 100;
+          }
+      }
+
+      .banner {
+        background-color:#2dac41;
+        background-image: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+        background-size: 100% 50%;
+        height: 20%;
+        position: absolute;
+        right: 0; bottom: 0; left: 0;
+        text-shadow: 1px 1px 0 rgba(0,0,255,.5);
+
+        /* There's some awkward skewing going on with the text.
+        /* Getting lazy by just correcting it with left positioning.
+         */
+        .first-name {
+          font-size: .9em;
+          position: absolute;
+          top: 5px;
+          left: 11px;
+        }
+        .last-name {
+          font-size: 1.25em;
+          position: absolute;
+          top: 16px;
+          left: 10px;
+        }
+        .position {
+          font-size: .9em;
+          font-weight: normal;
+          position: absolute;
+          top: 35px;
+          left: 20px;
+        }
+      }
+    }
+
+    &.back {
+      background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg);
+      background-position: -25px 0;
+      height: @card-height + 50%;
+      width: @card-width + 50%;
+      z-index: 100;
+      .flip(180deg);
+      .hey {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        text-shadow: 1px 1px 0 #000;
+      }
+      &::after {
+          content: "";
+          background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+          background-size: contain;
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: 100;
+      }
+    }
+  }
+}

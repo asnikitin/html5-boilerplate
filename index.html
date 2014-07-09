@@ -10,7 +10,17 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+                background-color: #111;
+            }
+        </style>
+
         <script src="js/vendor/modernizr-2.8.0.min.js"></script>
     </head>
     <body>
@@ -19,10 +29,56 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Фотка</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/baby.png" class="img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        <div class="card">
+            <figure class="front">
+                <i class="inset-image"></i>
+                <div class="banner">
+                    <span class="first-name">Cory</span>
+                    <span class="last-name">Chase</span>
+                    <span class="position">Web Dev</span>
+                </div>
+            </figure>
+            <figure class="back">
+                <div class="hey">oh hey</div>
+            </figure>
+        </div>
+-->
+        <div class="jumbotron jum-mod">
+            <div class="container">
+                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-1" onclick="$('#myModal').modal()">
+                <img src="img/2/condom.png" class="rot-obj-l obj-2" onclick="$('#myModal').modal()">
+                <img src="img/2/creditcard.png" class="img-thumbnail rot-obj-l obj-3" onclick="$('#myModal').modal()">
+
+                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-4" onclick="$('#myModal').modal()">
+                <img src="img/2/baby.png" class="img-thumbnail rot-obj-r obj-5" onclick="$('#myModal').modal()">
+                <img src="img/2/baby.png" class="img-thumbnail rot-obj-r obj-6" onclick="$('#myModal').modal()">
+                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-7" onclick="$('#myModal').modal()">
+
+                <div class="portmone"></div>
+            </div>
+        </div>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

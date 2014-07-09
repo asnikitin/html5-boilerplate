@@ -1,266 +1,284 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screen readers: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.card {
+    height: 300px;
     position: absolute;
-    width: 1px;
+    top: 10%;
+    left: 40%;
+    width: 200px;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+}
+.card:hover {
+    -webkit-transform: rotateY(180deg) rotate(3deg);
+    -moz-transform: rotateY(180deg) rotate(3deg);
+    -o-transform: rotateY(180deg) rotate(3deg);
+    transform: rotateY(180deg) rotate(3deg);
+}
+.card figure {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #666;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card figure::before {
+    content: "";
+    background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+    border: 10px solid #f7ede7;
+    box-shadow: inset 3px 3px 0 #000000, inset -3px -3px #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.card figure.front {
+    background-image: url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/8103/profile/profile-512_1.jpg);
+    background-position: 111% top;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    /* Seems unnecessary, but this z-index handles an
+        /* odd flickering of absolutely positioned content
+        /* inside the card region */
+    z-index: 50;
+}
+.card figure.front::after {
+    content: "";
+    background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+.card figure.front .inset-image {
+    background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg);
+    background-size: contain;
+    border-radius: 50%;
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 500;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+}
+.card figure.front .inset-image::before {
+    background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+    border: 1px solid #000;
+    border-radius: 50%;
+    content: "";
+    height: 85px;
+    position: absolute;
+    opacity: .4;
+    top: 1px;
+    right: 1px;
+    width: 85px;
+    z-index: 100;
+}
+.card figure.front .inset-image::after {
+    content: "";
+    background-color: rgba(0, 255, 0, 0.25);
+    box-shadow: inset 0 0 150px rgba(0, 255, 255, 0.25), 2px 4px 0 rgba(0, 255, 255, 0.5);
+    border: 1px solid #000;
+    filter: none;
+    -webkit-filter: grayscale(0);
+    border-radius: 50%;
+    height: 85px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    bottom: 0;
+    left: -2px;
+    width: 85px;
+    z-index: 100;
+}
+.card figure.front .banner {
+    background-color: #2dac41;
+    background-image: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+    background-size: 100% 50%;
+    height: 20%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-shadow: 1px 1px 0 rgba(0, 0, 255, 0.5);
+    /* There's some awkward skewing going on with the text.
+          /* Getting lazy by just correcting it with left positioning.
+           */
+}
+.card figure.front .banner .first-name {
+    font-size: .9em;
+    position: absolute;
+    top: 5px;
+    left: 11px;
+}
+.card figure.front .banner .last-name {
+    font-size: 1.25em;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+}
+.card figure.front .banner .position {
+    font-size: .9em;
+    font-weight: normal;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+}
+.card figure.back {
+    background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg);
+    background-position: -25px 0;
+    height: 350px;
+    width: 250px;
+    z-index: 100;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.card figure.back .hey {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    text-shadow: 1px 1px 0 #000;
+}
+.card figure.back::after {
+    content: "";
+    background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+.obj-1 {
+    position: relative;
+    top: 25px;
+    left: 115px;
+    max-width: 250px;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.obj-2 {
+    position: relative;
+    top: 35px;
+    left: 235px;
+    max-width: 250px;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.obj-3 {
+    position: relative;
+    top: 75px;
+    left: 235px;
+    max-width: 250px;
 }
 
-.clearfix:after {
-    clear: both;
+.obj-4 {
+    position: relative;
+    top: 15px;
+    left: 45px;
+    max-width: 250px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.obj-5 {
+    position: relative;
+    top: 10px;
+    left: 35px;
+    max-width: 250px;
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.obj-6 {
+    position: relative;
+    top: 70px;
+    left: 235px;
+    max-width: 250px;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+.obj-7 {
+    position: relative;
+    top: 200px;
+    left: 235px;
+    max-width: 250px;
 }
+
+.jum-mod {
+    overflow: hidden;
+    box-shadow: inset 0 0 12px #000;
+    height: 750px;
+    background: url(../img/vintage-wood.jpg) no-repeat center top;
+}
+
+.portmone {
+    background: url(../img/portmone.png) no-repeat center top;
+    width: 783px;
+    height: 339px;
+    position: relative;
+    left: -50px;
+    bottom: -50px;
+    -moz-transform: rotate(10deg); /* Для Firefox */
+    -ms-transform: rotate(10deg); /* Для IE */
+    -webkit-transform: rotate(10deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(10deg); /* Для Opera */
+    transform: rotate(10deg);
+}
+
+.rot-obj-r:hover {
+    -moz-transform: rotate(3deg); /* Для Firefox */
+    -ms-transform: rotate(3deg); /* Для IE */
+    -webkit-transform: rotate(3deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(3deg); /* Для Opera */
+    transform: rotate(3deg);
+}
+
+.rot-obj-l:hover {
+    -moz-transform: rotate(-3deg); /* Для Firefox */
+    -ms-transform: rotate(-3deg); /* Для IE */
+    -webkit-transform: rotate(-3deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-3deg); /* Для Opera */
+    transform: rotate(-3deg);
+}
+
+.trans-obj:hover {
+    transform: translate(350px,0);
+    -webkit-transform: translate(350px,0); /** Chrome & Safari **/
+    -o-transform: translate(350px,0); /** Opera **/
+    -moz-transform: translate(350px,0); /** Firefox **/
+}
+
+
+
+
+
+
+
+
+
+
+

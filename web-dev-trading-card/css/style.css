@@ -1,0 +1,179 @@
+/* Derived from http://desandro.github.io/3dtransforms/examples/card-01.html */
+body {
+  background: #333;
+}
+.card {
+  height: 300px;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 200px;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: rotate(7deg);
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+}
+.card:hover {
+  -webkit-transform: rotateY(180deg) rotate(3deg);
+  -moz-transform: rotateY(180deg) rotate(3deg);
+  -o-transform: rotateY(180deg) rotate(3deg);
+  transform: rotateY(180deg) rotate(3deg);
+}
+.card figure {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #666;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card figure::before {
+  content: "";
+  background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+  border: 10px solid #f7ede7;
+  box-shadow: inset 3px 3px 0 #000000, inset -3px -3px #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.card figure.front {
+  background-image: url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/8103/profile/profile-512_1.jpg);
+  background-position: 111% top;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  /* Seems unnecessary, but this z-index handles an 
+      /* odd flickering of absolutely positioned content
+      /* inside the card region */
+  z-index: 50;
+}
+.card figure.front::after {
+  content: "";
+  background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.card figure.front .inset-image {
+  background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  position: absolute;
+  height: 85px;
+  width: 85px;
+  bottom: 15px;
+  right: 15px;
+  z-index: 500;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+}
+.card figure.front .inset-image::before {
+  background-image: url(https://dl.dropbox.com/s/dyl5qrg01751pf6/halftone.png);
+  border: 1px solid #000;
+  border-radius: 50%;
+  content: "";
+  height: 85px;
+  position: absolute;
+  opacity: .4;
+  top: 1px;
+  right: 1px;
+  width: 85px;
+  z-index: 100;
+}
+.card figure.front .inset-image::after {
+  content: "";
+  background-color: rgba(0, 255, 0, 0.25);
+  box-shadow: inset 0 0 150px rgba(0, 255, 255, 0.25), 2px 4px 0 rgba(0, 255, 255, 0.5);
+  border: 1px solid #000;
+  filter: none;
+  -webkit-filter: grayscale(0);
+  border-radius: 50%;
+  height: 85px;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  bottom: 0;
+  left: -2px;
+  width: 85px;
+  z-index: 100;
+}
+.card figure.front .banner {
+  background-color: #2dac41;
+  background-image: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+  background-size: 100% 50%;
+  height: 20%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-shadow: 1px 1px 0 rgba(0, 0, 255, 0.5);
+  /* There's some awkward skewing going on with the text.
+        /* Getting lazy by just correcting it with left positioning.
+         */
+}
+.card figure.front .banner .first-name {
+  font-size: .9em;
+  position: absolute;
+  top: 5px;
+  left: 11px;
+}
+.card figure.front .banner .last-name {
+  font-size: 1.25em;
+  position: absolute;
+  top: 16px;
+  left: 10px;
+}
+.card figure.front .banner .position {
+  font-size: .9em;
+  font-weight: normal;
+  position: absolute;
+  top: 35px;
+  left: 20px;
+}
+.card figure.back {
+  background-image: url(https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/944542_661077597239746_959882968_n.jpg);
+  background-position: -25px 0;
+  height: 350px;
+  width: 250px;
+  z-index: 100;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card figure.back .hey {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  text-shadow: 1px 1px 0 #000;
+}
+.card figure.back::after {
+  content: "";
+  background: url(https://dl.dropbox.com/s/kflw185x9trc17v/dust.png);
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
