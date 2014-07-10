@@ -179,52 +179,86 @@
     z-index: 100;
 }
 
-.obj-1 {
-    position: relative;
-    top: 25px;
+.null-button {
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.img-thumbnail-my {/*
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;*/
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.obj-rotate-right15 {
+    -moz-transform: rotate(15deg); /* Для Firefox */
+    -ms-transform: rotate(15deg); /* Для IE */
+    -webkit-transform: rotate(15deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(15deg); /* Для Opera */
+    transform: rotate(15deg);
+}
+
+.obj-rotate-right8 {
+    -moz-transform: rotate(8deg); /* Для Firefox */
+    -ms-transform: rotate(8deg); /* Для IE */
+    -webkit-transform: rotate(8deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(8deg); /* Для Opera */
+    transform: rotate(8deg);
+}
+
+.obj-rotate-left {
+    -moz-transform: rotate(-15deg); /* Для Firefox */
+    -ms-transform: rotate(-15deg); /* Для IE */
+    -webkit-transform: rotate(-15deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-15deg); /* Для Opera */
+    transform: rotate(-15deg);
+}
+
+.obj-baby-book {
+    position: absolute;
     left: 115px;
+    max-width: 200px;
+}
+
+.obj-condom {
+    position: absolute;
+    top: 120px;
+    left: 535px;
+    max-width: 130px;
+}
+
+.obj-credit-card {
+    position: absolute;
+    top: 150px;
+    left: 735px;
     max-width: 250px;
 }
 
-.obj-2 {
-    position: relative;
-    top: 35px;
-    left: 235px;
+.obj-dollars {
+    position: absolute;
+    top: 310px;
+    left: 145px;
+    max-width: 275px;
+}
+
+.obj-visit-card {
+    position: absolute;
+    top: 420px;
+    left: 525px;
     max-width: 250px;
 }
 
-.obj-3 {
-    position: relative;
-    top: 75px;
-    left: 235px;
-    max-width: 250px;
-}
-
-.obj-4 {
-    position: relative;
-    top: 15px;
-    left: 45px;
-    max-width: 250px;
-}
-
-.obj-5 {
-    position: relative;
-    top: 10px;
-    left: 35px;
-    max-width: 250px;
-}
-
-.obj-6 {
-    position: relative;
-    top: 70px;
-    left: 235px;
-    max-width: 250px;
-}
-
-.obj-7 {
-    position: relative;
-    top: 200px;
-    left: 235px;
+.obj-check-mac {
+    position: absolute;
+    top: 330px;
+    left: 840px;
     max-width: 250px;
 }
 
@@ -241,7 +275,7 @@
     height: 339px;
     position: relative;
     left: -50px;
-    bottom: -50px;
+    top: 500px;
     -moz-transform: rotate(10deg); /* Для Firefox */
     -ms-transform: rotate(10deg); /* Для IE */
     -webkit-transform: rotate(10deg); /* Для Safari, Chrome, iOS */

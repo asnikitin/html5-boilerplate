@@ -15,7 +15,7 @@
 
         <style>
             body {
-                padding-top: 50px;
+                padding-top: 25px;
                 padding-bottom: 20px;
                 background-color: #111;
             }
@@ -31,20 +31,84 @@
         <!-- Add your site or application content here -->
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal-baby-book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Фотка</h4>
+                        <h4 class="modal-title" id="modal-baby-bookLabel">Фотография</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="img/2/baby.png" class="img-thumbnail">
+                        <img src="img/2/baby_book.jpg" class="img-thumbnail">
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="modal fade" id="modal-condom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modal-condomLabel">Презерватив</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/condom.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-dollars" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modal-dollarsLabel">Деньги</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/dollars.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-visit-card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modal-visit-cardLabel">Визитная карточка</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/visit_card.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-credit-card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modal-credit-cardLabel">Банковская карточка</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/credit_card.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-check-mac" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modal-check-macLabel">Чек из макдака</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/2/check_mac.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--
         <div class="card">
             <figure class="front">
@@ -59,18 +123,36 @@
                 <div class="hey">oh hey</div>
             </figure>
         </div>
--->
+-->          <!-- Button trigger modal -->
+        <div class="null-button">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#helpModal">Прочитать про задание</button>
+        </div>
+        <!-- README Modal -->
+        <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="helpModalLabel">Задание</h4>
+                    </div>
+                    <div class="modal-body">
+                        bla bla bla
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="jumbotron jum-mod">
             <div class="container">
-                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-1" onclick="$('#myModal').modal()">
-                <img src="img/2/condom.png" class="rot-obj-l obj-2" onclick="$('#myModal').modal()">
-                <img src="img/2/creditcard.png" class="img-thumbnail rot-obj-l obj-3" onclick="$('#myModal').modal()">
-
-                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-4" onclick="$('#myModal').modal()">
-                <img src="img/2/baby.png" class="img-thumbnail rot-obj-r obj-5" onclick="$('#myModal').modal()">
-                <img src="img/2/baby.png" class="img-thumbnail rot-obj-r obj-6" onclick="$('#myModal').modal()">
-                <img src="img/2/baby.png" class="img-thumbnail rot-obj-l obj-7" onclick="$('#myModal').modal()">
-
+                <img src="img/2/baby_book.jpg" class="img-thumbnail rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()">
+                <img src="img/2/condom.png" class="img-thumbnail-my rot-obj-l obj-condom" onclick="$('#modal-condom').modal()">
+                <img src="img/2/credit_card.png" class="img-thumbnail-my rot-obj-l obj-credit-card obj-rotate-right8" onclick="$('#modal-credit-card').modal()">
+                <img src="img/2/dollars.png" class="img-thumbnail-my rot-obj-r obj-dollars" onclick="$('#modal-dollars').modal()">
+                <img src="img/2/visit_card.png" class="img-thumbnail-my rot-obj-r obj-visit-card obj-rotate-left" onclick="$('#modal-visit-card').modal()">
+                <img src="img/2/check_mac.jpg" class="img-thumbnail-my rot-obj-l obj-check-mac obj-rotate-right15" onclick="$('#modal-check-mac').modal()">
                 <div class="portmone"></div>
             </div>
         </div>
