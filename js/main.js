@@ -1,3 +1,4 @@
+/*
 jQuery.fn.fadePhotos = function(options) {
     return this.each(function(){
         settings=jQuery.extend({
@@ -13,3 +14,17 @@ jQuery.fn.fadePhotos = function(options) {
 
 
 }
+    */
+
+$(document).ready(function() {
+    var isRotate=1;
+    $("#fssAction").click(function() {
+        if(isRotate) {
+            $("#card-rot").addClass('card-rotate');
+            isRotate--;
+        }else{
+            $("#card-rot").removeClass('card-rotate');
+            isRotate++;
+        }
+    });
+});
