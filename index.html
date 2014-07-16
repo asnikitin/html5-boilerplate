@@ -1,5 +1,6 @@
 <!doctype html>
-<html class="no-js" lang="">
+<!--[if gte IE 9]>         <html class="no-js gte-ie9"> <![endif]-->
+<!--[if lt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +44,7 @@
                         <button type="button" id="fssAction" class="btn btn-primary">Посмотреть обратную сторону</button>
                         </div>
                         <div id="card-rot" class="card">
-                            <figure class="front">
+                            <figure id="myid" class="front">
                                 <img src="img/2/baby_book.jpg" class="img-thumbnail photo-max-w">
                             </figure>
                             <figure class="back">
@@ -119,21 +120,8 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="card">
-            <figure class="front">
-                <i class="inset-image"></i>
-                <div class="banner">
-                    <span class="first-name">Cory</span>
-                    <span class="last-name">Chase</span>
-                    <span class="position">Web Dev</span>
-                </div>
-            </figure>
-            <figure class="back">
-                <div class="hey">oh hey</div>
-            </figure>
-        </div>
--->          <!-- Button trigger modal -->
+
+        <!-- Button trigger modal -->
         <div class="null-button">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#helpModal">Прочитать про задание</button>
         </div>
@@ -146,7 +134,7 @@
                         <h4 class="modal-title" id="helpModalLabel">Задание</h4>
                     </div>
                     <div class="modal-body">
-                        bla bla bla
+                        Перед вами все, что осталось от загулявшего товарища. Но как восставновить всю цепочку событий? Как найти ответы на все вопросы?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
@@ -157,13 +145,34 @@
 
         <div class="jumbotron jum-mod">
             <div class="container">
-                <img src="img/2/baby_book.jpg" class="img-thumbnail rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()">
-                <img src="img/2/condom.png" class="img-thumbnail-my rot-obj-l obj-condom" onclick="$('#modal-condom').modal()">
-                <img src="img/2/credit_card.png" class="img-thumbnail-my rot-obj-l obj-credit-card obj-rotate-right8" onclick="$('#modal-credit-card').modal()">
-                <img src="img/2/dollars.png" class="img-thumbnail-my rot-obj-r obj-dollars" onclick="$('#modal-dollars').modal()">
-                <img src="img/2/visit_card.png" class="img-thumbnail-my rot-obj-r obj-visit-card obj-rotate-left" onclick="$('#modal-visit-card').modal()">
-                <img src="img/2/check_mac.jpg" class="img-thumbnail-my rot-obj-l obj-check-mac obj-rotate-right15" onclick="$('#modal-check-mac').modal()">
-                <div class="portmone"></div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/2/baby_book.jpg" class="img-thumbnail rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()"/>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/2/condom.png" class="img-thumbnail-my rot-obj-l obj-condom" onclick="$('#modal-condom').modal()"/>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/2/credit_card.png" class="img-thumbnail-my rot-obj-l obj-credit-card obj-rotate-right8" onclick="$('#modal-credit-card').modal()"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/2/dollars.png" class="img-thumbnail-my rot-obj-r obj-dollars" onclick="$('#modal-dollars').modal()">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/2/visit_card.png" class="img-thumbnail-my rot-obj-r obj-visit-card obj-rotate-left" onclick="$('#modal-visit-card').modal()">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/2/check_mac.jpg" class="img-thumbnail-my rot-obj-l obj-check-mac obj-rotate-right15" onclick="$('#modal-check-mac').modal()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portmone">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

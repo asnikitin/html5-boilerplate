@@ -20,10 +20,12 @@ $(document).ready(function() {
     var isRotate=1;
     $("#fssAction").click(function() {
         if(isRotate) {
-            $("#card-rot").addClass('card-rotate');
+	        if($('html').hasClass('gte-ie9')) {$("#myid").css("visibility","hidden");}else{
+            $("#card-rot").addClass('card-rotate');}
             isRotate--;
         }else{
-            $("#card-rot").removeClass('card-rotate');
+            if($('html').hasClass('gte-ie9')) {$("#myid").css("visibility","visible");}else{
+            $("#card-rot").removeClass('card-rotate');}
             isRotate++;
         }
     });

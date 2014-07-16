@@ -17,14 +17,18 @@
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
 }
 .card-rotate {
-    -webkit-transform: rotateY(180deg) rotate(5deg);
-    -moz-transform: rotateY(180deg) rotate(5deg);
-    -o-transform: rotateY(180deg) rotate(5deg);
+    -moz-transform: rotateY(180deg) rotate(5deg); /* ��� Firefox */
+    -ms-transform: rotateY(180deg) rotate(5deg); /* ��� IE */
+    -webkit-transform: rotateY(180deg) rotate(5deg); /* ��� Safari, Chrome, iOS */
+    -o-transform: rotateY(180deg) rotate(5deg); /* ��� Opera */
     transform: rotateY(180deg) rotate(5deg);
 }
+
 .card figure {
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,12 +49,13 @@
     /* Seems unnecessary, but this z-index handles an
         /* odd flickering of absolutely positioned content
         /* inside the card region */
-    z-index: 50;
+    z-index: 75;
 }
 
 .card figure.back {
-    z-index: 100;
+    z-index: 50;
     -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
@@ -104,60 +109,52 @@
 
 .obj-baby-book {
     position: relative;
-    top: -100px;
-    left: 115px;
     max-width: 200px;
 }
 
 .obj-condom {
     position: relative;
-    top: -100px;
-    left: 335px;
     max-width: 130px;
 }
 
 .obj-credit-card {
     position: relative;
-    top: -100px;
-    left: 435px;
     max-width: 250px;
 }
 
 .obj-dollars {
     position: relative;
-    top: 310px;
-    left: -345px;
     max-width: 275px;
 }
 
 .obj-visit-card {
     position: relative;
     top: 70px;
-    left: -325px;
     max-width: 250px;
 }
 
 .obj-check-mac {
     position: relative;
-    top: -100px;
-    left: 840px;
     max-width: 250px;
 }
 
 .jum-mod {
     overflow: hidden;
-    box-shadow: inset 0 0 12px #000;
-    height: 730px;
-    background: url(../img/vintage-wood.jpg) no-repeat center top;
+    box-shadow: inset 0 0 6px #000;
+    /*height: 730px;
+    background: url(../img/vintage-wood.jpg) repeat center top;*/
+    background: url(../img/wood2.jpg) no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size:cover;
+    -moz-background-size: cover;
 }
 
 .portmone {
-    background: url(../img/portmone.png) no-repeat center top;
+    background: url(../img/portmone.png) repeat center top;
     width: 783px;
     height: 339px;
     position: relative;
-    left: -50px;
-    top: -400px;
     -moz-transform: rotate(10deg); /* Для Firefox */
     -ms-transform: rotate(10deg); /* Для IE */
     -webkit-transform: rotate(10deg); /* Для Safari, Chrome, iOS */
@@ -187,14 +184,3 @@
     -o-transform: translate(350px,0); /** Opera **/
     -moz-transform: translate(350px,0); /** Firefox **/
 }
-
-
-
-
-
-
-
-
-
-
-
