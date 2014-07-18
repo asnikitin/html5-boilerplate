@@ -17,16 +17,76 @@ jQuery.fn.fadePhotos = function(options) {
     */
 
 $(document).ready(function() {
-    var isRotate=1;
-    $("#fssAction").click(function() {
-        if(isRotate) {
-	        if($('html').hasClass('gte-ie9')) {$("#myid").css("visibility","hidden");}else{
-            $("#card-rot").addClass('card-rotate');}
-            isRotate--;
+    var isRotate_photo=1;
+    var isRotate_condom=1;
+    var isRotate_visit=1;
+    var isRotate_money=1;
+    var isRotate_credit=1;
+    var isRotate_check=1;
+    $("#fssAction-photo").click(function() {
+        if(isRotate_photo) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-photo").css("visibility","hidden");}else{
+                $("#card-rot-photo").addClass('card-rotate');}
+            isRotate_photo--;
         }else{
-            if($('html').hasClass('gte-ie9')) {$("#myid").css("visibility","visible");}else{
-            $("#card-rot").removeClass('card-rotate');}
-            isRotate++;
+            if($('html').hasClass('gte-ie9')) {$("#myid-photo").css("visibility","visible");}else{
+                $("#card-rot-photo").removeClass('card-rotate');}
+            isRotate_photo++;
+        }
+    });
+    $("#fssAction-condom").click(function() {
+        if(isRotate_condom) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-condom").css("visibility","hidden");}else{
+                $("#card-rot-condom").addClass('card-rotate');}
+            isRotate_condom--;
+        }else{
+            if($('html').hasClass('gte-ie9')) {$("#myid-condom").css("visibility","visible");}else{
+                $("#card-rot-condom").removeClass('card-rotate');}
+            isRotate_condom++;
+        }
+    });
+    $("#fssAction-money").click(function() {
+        if(isRotate_money) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-money").css("visibility","hidden");}else{
+                $("#card-rot-money").addClass('card-rotate');}
+            isRotate_money--;
+        }else{
+            if($('html').hasClass('gte-ie9')) {$("#myid-money").css("visibility","visible");}else{
+                $("#card-rot-money").removeClass('card-rotate');}
+            isRotate_money++;
+        }
+    });
+    $("#fssAction-visit").click(function() {
+        if(isRotate_visit) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-visit").css("visibility","hidden");}else{
+                $("#card-rot-visit").addClass('card-rotate');}
+            isRotate_visit--;
+        }else{
+            if($('html').hasClass('gte-ie9')) {$("#myid-visit").css("visibility","visible");}else{
+                $("#card-rot-visit").removeClass('card-rotate');}
+            isRotate_visit++;
+        }
+    });
+    $("#fssAction-credit").click(function() {
+        if(isRotate_credit) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-credit").css("visibility","hidden");}else{
+                $("#card-rot-credit").addClass('card-rotate');}
+            isRotate_credit--;
+        }else{
+            if($('html').hasClass('gte-ie9')) {$("#myid-credit").css("visibility","visible");}else{
+                $("#card-rot-credit").removeClass('card-rotate');}
+            isRotate_credit++;
+        }
+    });
+    $("#fssAction-check").click(function() {
+        if(isRotate_check) {
+            if($('html').hasClass('gte-ie9')) {$("#myid-check").css("visibility","hidden");}else{
+                $("#card-rot-check").addClass('card-rotate');}
+            isRotate_check--;
+        }else{
+            if($('html').hasClass('gte-ie9')) {$("#myid-check").css("visibility","visible");}else{
+                $("#card-rot-check").removeClass('card-rotate');}
+            isRotate_check++;
         }
     });
 });

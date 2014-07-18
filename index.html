@@ -41,10 +41,10 @@
                     </div>
                     <div class="modal-body text-center">
                         <div class="backside-button">
-                        <button type="button" id="fssAction" class="btn btn-primary">Посмотреть обратную сторону</button>
+                        <button type="button" id="fssAction-photo" class="btn btn-primary">Покрутить в руках</button>
                         </div>
-                        <div id="card-rot" class="card">
-                            <figure id="myid" class="front">
+                        <div id="card-rot-photo" class="card card-photo">
+                            <figure id="myid-photo" class="front">
                                 <img src="img/2/baby_book.jpg" class="img-thumbnail photo-max-w">
                             </figure>
                             <figure class="back">
@@ -63,7 +63,17 @@
                         <h4 class="modal-title" id="modal-condomLabel">Презерватив</h4>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="img/2/condom.png">
+                        <div class="backside-button">
+                            <button type="button" id="fssAction-condom" class="btn btn-primary">Покрутить в руках</button>
+                        </div>
+                        <div id="card-rot-condom" class="card card-condom">
+                            <figure id="myid-condom" class="front">
+                                <img src="img/2/condom.png" class="photo-max-w">
+                            </figure>
+                            <figure class="back">
+                                <img src="img/2/condom-cover.png" class="photo-max-w">
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,7 +86,17 @@
                         <h4 class="modal-title" id="modal-dollarsLabel">Деньги</h4>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="img/2/dollars.png">
+                        <div class="backside-button">
+                            <button type="button" id="fssAction-money" class="btn btn-primary">Покрутить в руках</button>
+                        </div>
+                        <div id="card-rot-money" class="card card-money">
+                            <figure id="myid-money" class="front">
+                                <img src="img/2/money.png" class="photo-max-w">
+                            </figure>
+                            <figure class="back">
+                                <img src="img/2/money-cover.png" class="photo-max-w">
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +109,17 @@
                         <h4 class="modal-title" id="modal-visit-cardLabel">Визитная карточка</h4>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="img/2/visit_card.png">
+                        <div class="backside-button">
+                            <button type="button" id="fssAction-visit" class="btn btn-primary">Покрутить в руках</button>
+                        </div>
+                        <div id="card-rot-visit" class="card card-visit">
+                            <figure id="myid-visit" class="front">
+                                <img src="img/2/visit-card.png" class="photo-max-w">
+                            </figure>
+                            <figure class="back">
+                                <img src="img/2/visit_card-cover.png" class="photo-max-w">
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +132,17 @@
                         <h4 class="modal-title" id="modal-credit-cardLabel">Банковская карточка</h4>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="img/2/credit_card.png">
+                        <div class="backside-button">
+                            <button type="button" id="fssAction-credit" class="btn btn-primary">Покрутить в руках</button>
+                        </div>
+                        <div id="card-rot-credit" class="card card-credit">
+                            <figure id="myid-credit" class="front">
+                                <img src="img/2/credit_card.png" class="photo-max-w">
+                            </figure>
+                            <figure class="back">
+                                <img src="img/2/credit_card-cover.png" class="photo-max-w">
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +155,17 @@
                         <h4 class="modal-title" id="modal-check-macLabel">Чек из макдака</h4>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="img/2/check_mac.jpg">
+                        <div class="backside-button">
+                            <button type="button" id="fssAction-check" class="btn btn-primary">Покрутить в руках</button>
+                        </div>
+                        <div id="card-rot-check" class="card card-check">
+                            <figure id="myid-check" class="front">
+                                <img src="img/2/check_mac.jpg" class="photo-max-w">
+                            </figure>
+                            <figure class="back">
+                                <img src="img/2/check_mac-cover.jpg" class="photo-max-w">
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,21 +197,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="img/2/baby_book.jpg" class="img-thumbnail rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()"/>
+                        <img src="img/2/baby_book.jpg" class="img-thumbnail img-thumbnail-my rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()"/>
                     </div>
                     <div class="col-md-4">
                         <img src="img/2/condom.png" class="img-thumbnail-my rot-obj-l obj-condom" onclick="$('#modal-condom').modal()"/>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/2/credit_card.png" class="img-thumbnail-my rot-obj-l obj-credit-card obj-rotate-right8" onclick="$('#modal-credit-card').modal()"/>
+                        <img src="img/2/visit-card.png" class="img-thumbnail-my rot-obj-r obj-visit-card obj-rotate-left" onclick="$('#modal-visit-card').modal()">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="img/2/dollars.png" class="img-thumbnail-my rot-obj-r obj-dollars" onclick="$('#modal-dollars').modal()">
+                        <img src="img/2/money.png" class="img-thumbnail-my rot-obj-r obj-dollars" onclick="$('#modal-dollars').modal()">
                     </div>
                     <div class="col-md-4">
-                        <img src="img/2/visit_card.png" class="img-thumbnail-my rot-obj-r obj-visit-card obj-rotate-left" onclick="$('#modal-visit-card').modal()">
+                        <img src="img/2/credit_card.png" class="img-thumbnail-my rot-obj-l obj-credit-card obj-rotate-right8" onclick="$('#modal-credit-card').modal()"/>
                     </div>
                     <div class="col-md-4">
                         <img src="img/2/check_mac.jpg" class="img-thumbnail-my rot-obj-l obj-check-mac obj-rotate-right15" onclick="$('#modal-check-mac').modal()">

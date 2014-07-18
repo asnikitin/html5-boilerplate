@@ -3,11 +3,43 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.card {
+.card-photo {
     margin-top: 35px;
-    height: 608px;
+    height: 588px;
     position: relative;
     width: 550px;
+}
+.card-condom {
+     margin-top: 35px;
+     height: 388px;
+     position: relative;
+     width: 550px;
+ }
+.card-money {
+    margin-top: 35px;
+    height: 508px;
+    position: relative;
+    width: 550px;
+}
+.card-visit {
+    margin-top: 35px;
+    height: 280px;
+    position: relative;
+    width: 550px;
+}
+.card-credit {
+    margin-top: 35px;
+    height: 280px;
+    position: relative;
+    width: 550px;
+}
+.card-check {
+    margin-top: 35px;
+    height: 580px;
+    position: relative;
+    width: 550px;
+}
+.card {
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
     -o-transition: -o-transform 0.5s;
@@ -124,6 +156,7 @@
 
 .obj-dollars {
     position: relative;
+    margin-top: 30px;
     max-width: 275px;
 }
 
