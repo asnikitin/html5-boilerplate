@@ -1,20 +1,27 @@
-/*
-jQuery.fn.fadePhotos = function(options) {
-    return this.each(function(){
-        settings=jQuery.extend({
-            speed: 'slow', // default animation transition speed
-            interval: 3000, // default interval between image change
-            ActionElement: 'fssAction'
-        }, options);
+
+//http://dzzzr-vegas.hol.es/
+$("#MainContainer").hide();
+Core.preloader.queue(
+    [
+        'img/wood2.jpg',
+        'img/portmone.png',
+        'img/2/baby.jpg',
+        'img/2/baby_backside.jpg',
+        'img/2/check_mac-cover.jpg',
+        'img/2/check_mac.jpg',
+        'img/2/condom.png',
+        'img/2/condom-cover.png',
+        'img/2/credit_card.png',
+        'img/2/credit_card-cover.png',
+        'img/2/money.png',
+        'img/2/money-cover.png',
+        'img/2/visit_card-cover.png',
+        'img/2/visit-card.png'
+    ]).preload(function(ui)
+    {
+        $("#SpinContainer").removeClass("spinner");
+        $("#MainContainer").show();
     });
-
-    // count number of Photos
-    var Photos = jQuery('> *', this).length;
-    Photos = Photos - 1;
-
-
-}
-    */
 
 $(document).ready(function() {
     var isRotate_photo=1;

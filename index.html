@@ -32,12 +32,12 @@
         <!-- Add your site or application content here -->
 
         <!-- Modal -->
-        <div class="modal fade" id="modal-baby-book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal-baby" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="modal-baby-bookLabel">Фотография</h4>
+                        <h4 class="modal-title" id="modal-babyLabel">Фотография</h4>
                     </div>
                     <div class="modal-body text-center">
                         <div class="backside-button">
@@ -45,10 +45,10 @@
                         </div>
                         <div id="card-rot-photo" class="card card-photo">
                             <figure id="myid-photo" class="front">
-                                <img src="img/2/baby_book.jpg" class="img-thumbnail photo-max-w">
+                                <img src="img/2/baby.jpg" class="img-thumbnail photo-max-w">
                             </figure>
                             <figure class="back">
-                                <img src="img/2/baby_book_backside.jpg" class="img-thumbnail photo-max-w">
+                                <img src="img/2/baby_backside.jpg" class="img-thumbnail photo-max-w">
                             </figure>
                         </div>
                     </div>
@@ -171,6 +171,8 @@
             </div>
         </div>
 
+        <div id="SpinContainer" class="spinner"></div>
+        <div id="MainContainer">
         <!-- Button trigger modal -->
         <div class="null-button">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#helpModal">Прочитать про задание</button>
@@ -197,7 +199,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="img/2/baby_book.jpg" class="img-thumbnail img-thumbnail-my rot-obj-l obj-baby-book obj-rotate-right" onclick="$('#modal-baby-book').modal()"/>
+                        <img src="img/2/baby.jpg" class="img-thumbnail img-thumbnail-my rot-obj-l obj-baby obj-rotate-right" onclick="$('#modal-baby').modal()"/>
                     </div>
                     <div class="col-md-4">
                         <img src="img/2/condom.png" class="img-thumbnail-my rot-obj-l obj-condom" onclick="$('#modal-condom').modal()"/>
@@ -227,16 +229,11 @@
         </div>
 
 
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.js"><\/script>')</script>
+        <script src="js/core-1.0.5.js"></script>
         <script src="js/vendor/bootstrap.js"></script>
-        <!--
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery('#photos').fadePhotos();
-            });
-        </script>
-        -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
