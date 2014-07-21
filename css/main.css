@@ -3,6 +3,15 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.b-toggle {
+    opacity: 0;
+    -webkit-transition: opacity .25s linear;
+    transition: opacity .25s linear;
+}
+.b-toggle.in {
+    opacity: 1;
+}
+
 .spinner {
     width: 40px;
     height: 40px;
@@ -111,7 +120,7 @@
     /* Seems unnecessary, but this z-index handles an
         /* odd flickering of absolutely positioned content
         /* inside the card region */
-    z-index: 75;
+    z-index: 45;
 }
 
 .card figure.back {
@@ -207,10 +216,10 @@
     /*height: 730px;
     background: url(../img/vintage-wood.jpg) repeat center top;*/
     background: url(../img/wood2.jpg) no-repeat center top;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size:cover;
-    -moz-background-size: cover;
+    background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size:auto;
+    -moz-background-size: auto;
 }
 
 .portmone {
