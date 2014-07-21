@@ -18,8 +18,14 @@ $(document).ready(function() {
             'img/portmone.png'
         ]).preload(function(ui)
         {
+            if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
+                $("#SpinContainer").removeClass("spinner");
+                $("#MSbug").addClass("in");
+            }else{
             $("#SpinContainer").removeClass("spinner");
             $("#MainContainer").addClass("in");
+            $("#helpModal").modal();
+            }
         });
     var isRotate_photo=1;
     var isRotate_condom=1;

@@ -3,6 +3,21 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.msbug {
+    left: 50%;
+    margin: -43px 0 0 -150px;
+    position: absolute;
+    top: 50%;
+    width: 300px;
+    color: #aaa;
+    text-align: center;
+}
+
+.msbug.a {
+    color: blue;
+    text-decoration: underline;
+}
+
 .b-toggle {
     opacity: 0;
     -webkit-transition: opacity .25s linear;
