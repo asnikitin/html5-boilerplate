@@ -20,7 +20,8 @@ $(document).ready(function() {
         {
             if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
                 $("#SpinContainer").removeClass("spinner");
-                $("#MSbug").addClass("in");
+                $("#MainContainer").hide();
+                $("#MSbug-id").addClass("in");
             }else{
             $("#SpinContainer").removeClass("spinner");
             $("#MainContainer").addClass("in");
